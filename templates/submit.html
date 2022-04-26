@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>CS361 MVP - Edit Profle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Edit Profile</h1>
+      <br>
+      <form action="" method="post">
+        <label for="devices">Choose a device to repair:</label>
+          <select name="devices" id="devices">
+            <optgroup label="Apple">
+              <option value="iPhone12">iPhone 12</option>
+              <option value="iPhone11">iPhone 11</option>
+            </optgroup>
+            <optgroup label="Samsung">
+              <option value="S22">S22</option>
+              <option value="S21">S21</option>
+            </optgroup>
+          </select>
+          <br>
+         <input type="checkbox" id="repair1" name="repair1" value="Glass Repair">
+          <label for="repair1"> Glass Repair</label><br>
+         <input type="checkbox" id="repair2" name="repair2" value="Battery Repair">
+          <label for="repair2"> Battery Repair</label><br>
+          <br>
+        <input class="btn btn-default" type="submit" value="Submit Claim">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    {% if success %}
+        <p><strong>Success:</strong> {{ success }}
+      {% endif %}
+    </div>
+    <a href='/home'>Go Back</a></h3><br>
+  </body>
+</html>

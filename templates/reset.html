@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Flask Intro - Reset Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please Reset Password</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="E-mail" name="email" value="{{
+          request.form.email }}">
+        <input class="btn btn-default" type="submit" value="Send Reset Link">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+      {% if success %}
+        <p><strong>Success:</strong> {{ success }}
+      {% endif %}
+    </div>
+    <a href='/'>Go Back</a></h3><br>
+  </body>
+</html>

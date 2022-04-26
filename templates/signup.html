@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>CS361 MVP - Signup Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up Here</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+          <input type="text" placeholder="E-Mail" name="email" value="{{
+          request.form.email }}">
+          <input type="text" placeholder="Phone Number" name="phone" value="{{
+          request.form.phone }}">
+        <input class="btn btn-default" type="submit" value="Sign Up">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+    <a href='/'>Go Back</a></h3><br>
+  </body>
+</html>
